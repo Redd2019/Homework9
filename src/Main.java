@@ -30,24 +30,29 @@ public class Main {
     }
     public static void task2() {
         System.out.println("Задача 2");
-        int[ ] arr = generateRandomArray();
+        int[] arr = generateRandomArray();
         System.out.println(Arrays.toString(arr));
-        int maxPayment = 100_000;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxPayment) {
-                maxPayment = arr[i];
+
+        int min = arr[0];
+        int max = arr[0];
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] < min) {
+                min = arr[i];
+  //              System.out.println(arr[i]);
             }
-        }
-        System.out.println("Максимальная сумма трат за день составила " + maxPayment + " рублей.");
-        //
-        int minPayment = 200_000;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > minPayment);{
-                minPayment = arr[i];
+            {
+                if (arr[i] > max) {
+                    max = arr[i];
+ //                   System.out.println(arr[i]);
+                }
             }
-        }
-        System.out.println("Минимальная сумма трат за день составила " + minPayment + " рублей.");
+        }System.out.println(max);
+        System.out.println(min);
     }
+
+
+
+
 
     public static void task3() {
         System.out.println("Задача 3");
